@@ -29,7 +29,7 @@ function Sidebar({ open, onClose }) {
       {visible && (
         <div
           className={`sidebar${isMobile && open ? ' open' : ''}`}
-          style={{ display: 'flex', flexDirection: 'column', height: '100%' }}
+          style={{ display: 'flex', flexDirection: 'column', height: auto }}
         >
           <div className="sidebar-content">
             {/* Show logo at top only on mobile */}
