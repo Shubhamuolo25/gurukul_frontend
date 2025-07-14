@@ -1,0 +1,150 @@
+body {
+  height: 100%;
+  width: 100%;
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+
+.login-left {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+}
+
+.login-bg {
+  width: 80%;
+  height: 78.1%;
+  padding-right: 0;
+  object-fit: cover;
+  border-radius: 1.74vw; /* 25px of 1440 */
+}
+
+.login-form {
+  width: 32%;
+  padding: 5% 8%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.logo {
+  width: 33%;
+  border-bottom: rgba(0, 0, 0, 0.2) solid 0.07vw; /* 1px of 1440 */
+  padding-bottom: 5%;
+}
+
+h2 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 700;
+  font-size: clamp(18px, 4vw, 48px);
+  line-height: 1.2;
+  letter-spacing: 0.25px;
+  text-align: left;
+  color: #101828;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 0;
+}
+
+.subtitle {
+  font-size: clamp(12px, 1.1vw, 14px); /* Min 12px, max 14px */
+  color: #6b7280;
+  margin-bottom: 8%;
+  margin-top: 2%;
+}
+
+.login-form-fields {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(6px, 0.56vw, 8px); /* Responsive gap */
+  width: 100%;
+}
+
+.login-form-fields label {
+  font-size: clamp(12px, 1.1vw, 14px); /* Responsive label font size */
+  font-weight: 600;
+  color: #101828;
+}
+
+.login-form-fields input {
+  height: 4.49vh; /* Keeps vertical height relative to screen height */
+  border: 1px solid #d1d5db;
+  padding: 0 clamp(12px, 1.39vw, 20px); /* Responsive horizontal padding */
+  margin-bottom: clamp(6px, 0.59vw, 12px); /* Responsive bottom margin */
+  font-size: clamp(14px, 1.11vw, 16px); /* Responsive font size */
+  transition: border-color 0.3s;
+  border-radius: clamp(4px, 0.49vw, 7px); /* Responsive border-radius */
+}
+
+.submit-button {
+  margin-top: clamp(6px, 0.56vw, 10px); /* Responsive top margin */
+  padding: clamp(10px, 1.36vh, 14px); /* Responsive vertical padding */
+  background-color: #5B35DA;
+  color: #fff;
+  font-weight: 600;
+  font-size: clamp(13px, 1.04vw, 15px); /* Responsive font size */
+  border: none;
+  border-radius: clamp(6px, 0.56vw, 8px); /* Responsive border-radius */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #6840d6;
+}
+
+@media screen and (max-width: 720px) {
+  .login-left {
+    display: none;
+  }
+  .login-card {
+    height: 100vh;
+    width: 100%;
+  }
+  .login-form {
+    width: 100%;
+    height: 100vh;
+    padding: 5% 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+}
+@media (min-width: 721px) {
+  .login-card {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .login-form-fields input {
+    height: calc(4.49vh * 1.3);
+  }
+
+  .submit-button {
+    padding: calc(1.36vh * 2); /* Increases vertical padding */
+  }
+
+  .login-form {
+    padding-top: calc(5% * 2);
+    padding-bottom: calc(5% * 2);
+  }
+
+  .logo {
+    padding-bottom: calc(5% * 2);
+  }
+
+  h2 {
+    line-height: calc(1.2 * 2); /* Adjust line-height if needed */
+  }
+}

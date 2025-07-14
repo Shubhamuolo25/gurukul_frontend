@@ -1,0 +1,213 @@
+.cards-list {
+  display: flex;
+  gap: 24px;
+  justify-content: center;
+  flex-wrap: wrap;
+  min-height: 725px;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* padding: 0 0 24px; */
+  gap: 16px;
+  width: 276px;
+  height: 345px;
+  background: #F6F6F6;
+  border: 1px solid #E2E2E2;
+  border-radius: 16px;
+  position: relative;
+}
+
+.card-image {
+  width: 276px;
+  height: 270px;
+  background-size: cover;
+  background-position: center;
+  border : 1px solid #E2E2E2;
+  border-radius: 16px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0;
+  width: 270px;
+  height: 56px;
+}
+
+.card-name {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+  color: #101828;
+}
+
+.card-email {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: 0.15px;
+  color: #101828;
+}
+
+.delete-btn {
+  display: none;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: #ff4d4f;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  font-size: 14px;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.card:hover .delete-btn {
+  display: flex;
+}
+
+.delete-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.delete-confirm-modal {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 32px 28px 24px 28px;
+  min-width: 320px;
+  max-width: 90vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.delete-confirm-message {
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 24px;
+  color: #222;
+}
+
+.delete-confirm-actions {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.btnConfirmDelete, .btnCancelDelete {
+  padding: 8px 22px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.18s;
+}
+
+.btnConfirmDelete {
+  background: #e53935;
+  color: #fff;
+}
+
+.btnConfirmDelete:hover {
+  background: #b71c1c;
+}
+
+.btnCancelDelete {
+  background: #f1f1f1;
+  color: #333;
+}
+
+.btnCancelDelete:hover {
+  background: #e0e0e0;
+}
+
+
+@media (max-width: 575px) {
+  .card {
+    width: 184px;   /* 276px * 2/3 */
+    height: 230px;  /* 345px * 2/3 */
+  }
+
+  .card-image {
+    width: 184px;    /* match card width */
+    height: 160px;   /* 270px * 2/3 */
+  }
+
+  .card-info {
+    width: 180px;    /* 270 * 2/3 */
+    height: 37px;    /* 56 * 2/3 */
+  }
+
+  .card-name,
+  .card-email {
+    font-size: 15px;    /* 22 * 2/3 */
+    line-height: 19px;  /* 28 * 2/3 */
+  }
+
+  .delete-btn {
+    width: 16px;      /* 24 * 2/3 */
+    height: 16px;
+    font-size: 9px;   /* 14 * 2/3 */
+    top: 5px;
+    right: 5px;
+  }
+}
+@media (max-width: 400px) {
+  .card {
+    width: 138px;   /* 276px / 2 */
+    height: 172.5px; /* 345px / 2 */
+  }
+
+  .card-image {
+    width: 138px;    /* match card width */
+    height: 120px;   /* half of 270px */
+  }
+
+  .card-info {
+    width: 135px;    /* 270 / 2 */
+    height: 28px;    /* 56 / 2 */
+  }
+
+  .card-name,
+  .card-email {
+    font-size: 11px;    /* 22 / 2 */
+    line-height: 14px;  /* 28 / 2 */
+  }
+
+  .delete-btn {
+    width: 12px;      /* 24 / 2 */
+    height: 12px;
+    font-size: 7px;   /* 14 / 2 */
+    top: 4px;
+    right: 4px;
+  }
+}

@@ -1,0 +1,18 @@
+
+<svg width="396" height="135" viewBox="0 0 396 135" xmlns="http://www.w3.org/2000/svg" style="font-family: 'Helvetica Neue', sans-serif;">
+  <!-- Background box -->
+  <rect x="0" y="0" width="396" height="135" rx="16" ry="16" fill="white" stroke="#e0e0e0" />
+
+  <!-- Text -->
+  <text x="50%" y="50" dominant-baseline="middle" text-anchor="middle" font-size="18" fill="#333">
+    Are you sure you want to logout?
+  </text>
+
+  <!-- Yes button -->
+  <rect x="110" y="80" rx="8" ry="8" width="70" height="36" fill="#e53935" />
+  <text x="145" y="102" text-anchor="middle" font-size="16" fill="white">Yes</text>
+
+  <!-- No button -->
+  <rect x="216" y="80" rx="8" ry="8" width="70" height="36" fill="#f1f1f1" />
+  <text x="251" y="102" text-anchor="middle" font-size="16" fill="#333">No</text>
+</svg>
